@@ -6,6 +6,7 @@
       WebAssembly.instantiateStreaming(fetch("hello_wasm.gc.wasm"))
         .then(wasmModule => {
           const result = wasmModeult.instance.exports.add_one(3);
+          console.log(result);
           const text = document.createTextNode(result);
           document.body.appendChild(text);
         });
