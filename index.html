@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Rust WASM</title>
     <script> 
       WebAssembly.instantiateStreaming(fetch("hello_wasm.gc.wasm"))
         .then(wasmModule => {
@@ -9,6 +10,6 @@
           document.body.appendChild(text);
         });
     </script>
-  <head>
+  </head>
   <body></body>
-<html>
+</html>
