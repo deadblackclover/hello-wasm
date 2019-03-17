@@ -1,13 +1,4 @@
-extern crate wasm_bindgen;
-
-use wasm_bindgen::prelude::*;
-
-#[wasm_bindgen]
-extern {
-    pub fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+#[no_mangle]
+pub extern fn add_one(x: u32) -> u32 {
+    x + 1
 }
