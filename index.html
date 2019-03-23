@@ -5,11 +5,15 @@
         <script> 
             WebAssembly.instantiateStreaming(fetch('hello_wasm.gc.wasm'))
             .then(results => {
-                const result = results.instance.exports.hello("world");
+                const result = results.instance.exports.sum(1,2);
                 const text = document.createTextNode(result);
                 document.body.appendChild(text);
             });
         </script>
     </head>
-    <body></body>
+    <body>
+        <h3>Hello WASM app</h3>
+        <p>Example sum function</p>
+        <p>1 + 2 =</p>
+    </body>
 </html>

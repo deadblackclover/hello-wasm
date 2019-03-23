@@ -1,4 +1,4 @@
 #[no_mangle]
-pub extern fn hello(word: String) -> String {
-    format!("Hello, {}!", word)
+pub extern fn sum(x: i32, y: i32) -> i32 {
+    x + y
 }
