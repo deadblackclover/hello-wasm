@@ -1,4 +1,4 @@
 #[no_mangle]
-pub extern fn add_one(x: u32) -> u32 {
-    x + 1
+pub extern fn hello(word: String) -> String {
+    format!("Hello, {}!", word)
 }

@@ -5,7 +5,7 @@
         <script> 
             WebAssembly.instantiateStreaming(fetch('hello_wasm.gc.wasm'))
             .then(results => {
-                const result = results.instance.exports.add_one(3);
+                const result = results.instance.exports.hello("world");
                 const text = document.createTextNode(result);
                 document.body.appendChild(text);
             });
