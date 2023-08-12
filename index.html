@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Rust WASM</title>
-        <script> 
+        <script>
             WebAssembly.instantiateStreaming(fetch('hello_wasm.gc.wasm'))
             .then(results => {
                 const result = results.instance.exports.sum(1,2);
